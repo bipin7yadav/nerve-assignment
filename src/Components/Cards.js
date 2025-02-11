@@ -13,7 +13,10 @@ export default function Cards ({selectedViewStrategies, selectedDate}) {
               );
             })
         ) : (
-            <p className="not-found">No strategies available for {selectedDate}</p>
+            <div className="not-found">
+                <p>There are no strategies for </p>
+                <h2>{selectedDate.split("-").join(" ")}</h2>
+            </div>
         )}
         </div>
     );

@@ -63,7 +63,7 @@ const App = () => {
       <select onChange={(e) => setSelectedDate(e.target.value)} value={selectedDate}>
         {dateArray.map((date) => (
           <option key={date} value={date}>
-            {date}
+            {date.split("-").join(" ")}
           </option>
         ))}
       </select>
