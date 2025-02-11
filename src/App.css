@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
   min-height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  max-width: 90vw;
+  background: white;
+  padding: 1.25rem;
+  border-radius: 10px; 
+  min-height: 98vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.toggle-pannel {
+  display: flex;
+  justify-content: space-between;
+  background: #eaeaea;
+  padding: 5px; 
+  border-radius: 8px; 
+  margin-bottom: 15px; 
+}
+
+.toggle-pannel button {
+  flex: 1;
+  padding: 12px; 
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem; 
+}
+
+.toggle-pannel .active {
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem; 
+  border: 2px solid #007bff; 
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+}
+
+
+select:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 91, 187, 0.5); 
+}
+
+.cards {
   display: flex;
   flex-direction: column;
+  gap: 15px;
   align-items: center;
+  margin-top: 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 100%; 
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.125rem; 
+  color: #333;
+}
+
+.card p {
+  margin: 5px 0 0; 
+  font-size: 14px;
+  color: #666;
+}
+
+.not-found{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  *{
+    font-size: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .container {
+    padding: 10px;
+    width:100vw;
+  }
+  .toggle {
+    flex-direction: column;
+  }
+  .toggle button {
+    margin-bottom: 5px; 
+  }
+
+  .not-found{
+    font-size: 14px;
   }
 }
