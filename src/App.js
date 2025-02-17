@@ -78,6 +78,14 @@ const App = () => {
     strategyArray.find((item) => item.View === selectedView)?.Value[selectedDate] || [];
 
 
+    const handleCheckboxChange = (e, date) => {
+      if (e.target.checked) {
+        setSelectedDate(date);
+      } else {
+        setSelectedDate(null);  // Clear selection if unchecked
+      }
+    };
+
 
   return (
     <div className="container">
@@ -103,6 +111,19 @@ const App = () => {
           </option>
         ))}
       </select>
+
+      <div className="custom-dropdown">
+        {dateArray.map((date) => (
+          <div key={date} className="date-item">
+            <input
+              type="checkbox"
+              checked={selectedDate === date}
+              onChange={(e) => handleCheckboxChange(e, date)}
+            />
+            <label>{date.split('-').join(' ')}</label>
+          </div>
+        ))}
+      </div>
 
       <Cards selectedViewStrategies={selectedViewStrategies} view={selectedView} selectedDate={selectedDate} />
     </div>

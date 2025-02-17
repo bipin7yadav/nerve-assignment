@@ -113,6 +113,24 @@ option{
   font-size: 20px;
 }
 
+.custom-dropdown {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  background-color: white;
+}
+
+.date-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.date-item label {
+  margin-left: 10px;
+}
+
+
 
 @media (max-width: 768px) {
   *{
