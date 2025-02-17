@@ -43,7 +43,7 @@ export default function Cards ({selectedViewStrategies,view, selectedDate}) {
                       top: "50%",
                       left: "50%",
                       transform: "translate(-50%, -50%)",
-                      backgroundColor: "rgba(0, 0, 0, 0.8)",
+                      backgroundColor: "rgba(62, 173, 224, 0.8)",
                       color: "white",
                       display: "flex",
                       justifyContent: "center",
@@ -51,7 +51,7 @@ export default function Cards ({selectedViewStrategies,view, selectedDate}) {
                       borderRadius: "10px",
                       textAlign: "center",
                       padding: "20px",
-                      boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)"
+                      boxShadow: "0 0 1px rgba(51, 47, 47, 0.5)"
                     }}>
                       {tab} clicked
                     </div>
