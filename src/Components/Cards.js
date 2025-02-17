@@ -34,10 +34,28 @@ export default function Cards ({selectedViewStrategies,view, selectedDate}) {
             uniqueData.map((strategy, index) => {
             const count = selectedViewStrategies.filter((item) => item === strategy).length;
             return (
-                <div key={index} onClick={()=>handleClick(strategy)} className="card">
-                  {state &&
-                   <div style={{position:"fixed",width:"500px",height:"500px",position:"fixed",top:"50%",left:"50%",margin:"auto"}}>{tab} clicked</div>
-                   }
+                <div key={index} onClick={() => handleClick(strategy)} className="card">
+                  {state && (
+                    <div style={{
+                      position: "fixed",
+                      width: "300px",
+                      height: "100px",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      backgroundColor: "rgba(0, 0, 0, 0.8)",
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      borderRadius: "10px",
+                      textAlign: "center",
+                      padding: "20px",
+                      boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)"
+                    }}>
+                      {tab} clicked
+                    </div>
+                  )}
                   <h3>{strategy}</h3>
                   <p>{count} {count > 1 ? "Strategies" : "Strategy"}</p>
                 </div>
